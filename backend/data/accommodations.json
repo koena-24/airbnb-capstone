@@ -1,0 +1,33 @@
+[
+  {
+    "id": "d4178cc9-2455-4215-bce9-edd9ac322cce",
+    "title": "Luxury Apartment Sandton",
+    "location": "Sandton, Johannesburg",
+    "description": "Modern luxury apartment with skyline views.",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "guests": 4,
+    "type": "Entire Apartment",
+    "price": 1800,
+    "amenities": [
+      "WiFi",
+      "Pool",
+      "Kitchen",
+      "Free Parking",
+      "TV"
+    ],
+    "images": [
+      "https://picsum.photos/600/400?1",
+      "https://picsum.photos/600/400?2"
+    ],
+    "weeklyDiscount": 10,
+    "cleaningFee": 250,
+    "serviceFee": 180,
+    "occupancyTaxes": 100,
+    "hostId": "14d30044-78d5-4bb2-af14-bf4e540b8314",
+    "host": "Koena Host",
+    "rating": 4.8,
+    "reviews": 0,
+    "createdAt": "2026-06-30T10:24:47.344Z"
+  }
+]

@@ -1,0 +1,688 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+.navbar {
+  height: 86px;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+
+.brand {
+  color: #ff385c;
+  font-size: 30px;
+  margin: 0;
+}
+
+.search-pill {
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 10px 12px 10px 24px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.search-pill button {
+  border: none;
+  background: #ff385c;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.host-btn {
+  border: none;
+  background: #f7f7f7;
+  padding: 12px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.hero {
+  margin: 40px 70px;
+  min-height: 380px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #111827, #ff385c);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+}
+
+.hero h1 {
+  max-width: 650px;
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 560px;
+}
+
+.listings-section {
+  padding: 20px 70px 70px;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.property-card {
+  cursor: pointer;
+}
+
+.property-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.property-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.property-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.property-info p {
+  margin: 4px 0;
+  color: #717171;
+}
+
+.property-info span {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.price {
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 20px;
+    height: auto;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero {
+    margin: 20px;
+    padding: 35px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .listings-section {
+    padding: 20px;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.property-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.details-container {
+  padding: 35px 70px;
+}
+
+.details-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.main-image {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 18px 0 0 18px;
+}
+
+.small-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.small-images img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 2fr 380px;
+  gap: 50px;
+  margin-top: 35px;
+}
+
+.booking-card {
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  position: sticky;
+  top: 110px;
+}
+
+.reserve-btn {
+  width: 100%;
+  padding: 14px;
+  background: #ff385c;
+  border: none;
+  color: white;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .details-container {
+    padding: 20px;
+  }
+
+  .gallery,
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-image,
+  .small-images img {
+    height: 250px;
+    border-radius: 16px;
+  }
+}
+
+.booking-inputs {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.booking-inputs label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.booking-inputs input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.price-lines p {
+  display: flex;
+  justify-content: space-between;
+  color: #444;
+}
+
+.total-line {
+  font-weight: 900;
+  color: #111 !important;
+  font-size: 18px;
+}
+
+.brand {
+  text-decoration: none;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.auth-card h1 {
+  margin-top: 0;
+}
+
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 13px;
+  background: #ff385c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.auth-card a {
+  color: #ff385c;
+  font-weight: 800;
+}
+
+.reservation-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.reservation-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  padding: 18px;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+.reservation-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+@media (max-width: 700px) {
+  .reservation-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.search-pill input {
+  border: none;
+  outline: none;
+  max-width: 110px;
+}
+
+.search-pill input::placeholder {
+  color: #717171;
+}
+
+@media (max-width: 1000px) {
+  .search-pill {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 18px;
+  }
+
+  .search-pill input {
+    max-width: 140px;
+  }
+
+  .nav-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.home-section {
+  padding: 20px 70px 60px;
+}
+
+.inspiration-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.inspiration-card {
+  min-height: 190px;
+  color: white;
+  border-radius: 22px;
+  padding: 24px;
+}
+
+.inspiration-card h3 {
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+.pink { background: #cc2d4a; }
+.orange { background: #de3151; }
+.purple { background: #bc1a6e; }
+.dark { background: #222; }
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 20px 70px 60px;
+}
+
+.experience-card {
+  min-height: 360px;
+  border-radius: 28px;
+  padding: 40px;
+  color: white;
+  background: linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,0,0,0.25)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+}
+
+.experience-card.second {
+  background: linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,0,0,0.25)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+}
+
+.experience-card h2 {
+  font-size: 36px;
+  max-width: 320px;
+}
+
+.experience-card button,
+.shop-section button {
+  background: white;
+  color: #222;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.shop-section {
+  margin: 20px 70px 60px;
+  border-radius: 28px;
+  background: #f7f7f7;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.shop-section h2 {
+  font-size: 42px;
+  max-width: 360px;
+}
+
+.shop-section img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.getaway-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  color: #555;
+}
+
+.footer {
+  background: #f7f7f7;
+  padding: 45px 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  border-top: 1px solid #ddd;
+}
+
+.footer p {
+  color: #555;
+}
+
+.copyright {
+  padding: 20px 70px;
+  background: #f7f7f7;
+  border-top: 1px solid #ddd;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .home-section,
+  .experience-grid,
+  .footer {
+    padding: 20px;
+  }
+
+  .inspiration-grid,
+  .experience-grid,
+  .shop-section,
+  .footer,
+  .getaway-links {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-section {
+    margin: 20px;
+  }
+}
+
+.review-form {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.review-form select,
+.review-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.review-form textarea {
+  min-height: 90px;
+}
+
+.review-form button {
+  background: #ff385c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.reviews-list {
+  display: grid;
+  gap: 14px;
+}
+
+.review-card {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fafafa;
+}
+
+.property-card {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card img {
+  transition: transform 0.25s ease;
+}
+
+.property-card:hover img {
+  transform: scale(1.02);
+}
+
+.host-btn:hover,
+.reserve-btn:hover,
+.search-pill button:hover,
+.auth-card button:hover,
+.review-form button:hover {
+  opacity: 0.88;
+}
+
+.hero {
+  box-shadow: 0 18px 50px rgba(255, 56, 92, 0.18);
+}
+
+.property-card img,
+.main-image,
+.small-images img {
+  background: #f3f4f6;
+}
+
+.details-container h1,
+.hero h1 {
+  letter-spacing: -1px;
+}
+
+.empty-state {
+  padding: 30px;
+  border-radius: 18px;
+  background: #f9fafb;
+  border: 1px dashed #ddd;
+  text-align: center;
+  color: #717171;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #fff1f2;
+  color: #ff385c;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.footer h4 {
+  margin-top: 0;
+}
+
+.footer p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    font-size: 26px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .property-card img {
+    height: 230px;
+  }
+}
+
+body {
+  background: #fbf7ef;
+}
+
+.navbar {
+  background: rgba(251, 247, 239, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.hero {
+  background: linear-gradient(135deg, #fff3e4, #ffe4d6);
+  color: #222;
+  border: 1px solid #f1dfc8;
+}
+
+.listings-section,
+.home-section {
+  background: #fbf7ef;
+}
+
+.property-card,
+.booking-card,
+.review-card,
+.auth-card,
+.reservation-card {
+  background: #fffaf3;
+  border: 1px solid #f0dfc9;
+}
+
+.shop-section,
+.footer,
+.copyright {
+  background: #f6eadb;
+}
+
+.search-pill,
+.host-btn {
+  background: #fffaf3;
+}

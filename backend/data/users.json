@@ -1,0 +1,10 @@
+[
+  {
+    "id": "14d30044-78d5-4bb2-af14-bf4e540b8314",
+    "username": "Koena Host",
+    "email": "host@test.com",
+    "password": "$2b$10$Y0Fs/3iTeB6RfYkl0JbW2O/.df/XRhOwY58vmJv8j1SYsqf6YjykG",
+    "role": "host",
+    "createdAt": "2026-06-30T10:03:15.525Z"
+  }
+]
